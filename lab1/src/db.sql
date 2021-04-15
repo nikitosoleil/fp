@@ -33,6 +33,7 @@ create table if not exists types
 
 create table if not exists usage_statistics
 (
+    id   serial primary key,
     software_id int references software (id),
     user_id     int references users (id),
     quantity int
